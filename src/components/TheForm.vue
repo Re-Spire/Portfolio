@@ -1,0 +1,103 @@
+<template>
+    <form @submit.prevent="onSubmit" id="form" ref="form">
+      <h2>Contactez-moi pour vos projets!</h2>
+      <div>
+        <label for="name">Nom (Obligatoire)</label>
+        <input id="name" ref="name" type="text" placeholder="" required />
+      </div>
+      <div>
+        <label for="subject">Sujet (Obligatoire)</label>
+        <input id="subject" ref="subject" type="text" placeholder="" required />
+      </div>
+      <div>
+        <label for="message">Votre message ici</label>
+        <textarea
+          id="message"
+          ref="message"
+          rows="15"
+          cols="80"
+          placeholder="Merci d'écrire votre message ici."
+          required
+        />
+      </div>
+      <button type="submit" value="send" @click="showMessage">Envoyer</button>
+      <p class="message_sent" v-show="messageSent">Message envoyé {{ mail }}</p>
+    </form>
+  </template>
+  
+  <script setup>
+  import { ref, computed } from 'vue'
+  
+  const name = ref('')
+  const subject = ref('')
+  const message = ref('')
+
+  // Défini messageSent en false au départ
+  const messageSent = ref(false)
+  
+  // Vérifie si les champs sont remplis
+  const isFormValid = computed(() => {
+    return name.value && subject.value && message.value
+  })
+  
+  
+  const onSubmit = () => {
+    if (isFormValid.value) {
+  
+      messageSent.value = true
+      document.querySelector('form').reset()
+      setTimeout(() => {
+        messageSent.value = ''
+      }, 1500)
+    }
+  }
+  </script>
+  
+  <style scoped>
+  h2 {
+    padding-top: 0;
+    text-decoration: underline;
+    color: #ccb403;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    margin-top: 50px;
+    margin-left: 65px;
+    background-color: #034e7c;
+    box-shadow: 5px 5px 1px #ccb403;
+    width: 94%;
+    border-radius: 5%;
+    color: #ccb403;
+  }
+  
+  label {
+    background-color: var(--primary-color);
+  }
+  
+  button {
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+  }
+  
+  textarea {
+    border-radius: 10px;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #form {
+    scroll-margin-top: 130px;
+  }
+  </style>

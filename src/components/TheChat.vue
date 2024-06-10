@@ -1,0 +1,94 @@
+    <div>
+      <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6">
+        <div class="bg-white">
+          <div>
+            <h3 class="text-lg font-medium text-warm-gray-900">
+              Liste des commentaires
+            </h3>
+            
+            <div id="comment-list" class="-my-4">
+              <div class="flex space-x-4 text-sm text-gray-500">
+                <div class="flex-1 py-10">
+                  <h3 class="font-medium text-gray-900">Geoffrey Bunel</h3>
+                  <div class="prose prose-sm mt-4 max-w-none text-gray-500">
+                    <p>
+                      Bienvenue dans le chat dynamique sans rechargement, n'hésiter pas à poser des questions ici.
+                    </p>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+        <div class="py-10 lg:col-span-2 xl:py-12">
+          <h3 class="text-lg font-medium text-warm-gray-900">
+            Écrire un commentaire
+          </h3>
+          <div
+            id="error-message"
+            style="display: none"
+            class="mt-4 mx-auto max-w-4xl"
+          >
+            <div class="rounded-md bg-red-50 p-4">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <svg
+                    class="h-5 w-5 text-red-400"
+                    data-description="Heroicon name: mini/x-circle"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <h3 class="text-sm font-medium text-red-800">
+                    Tous les champs doivent être remplis
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+            <div>
+              <label for="first-name" class="block text-sm font-medium text-warm-gray-900">Prénom</label>
+              <div class="mt-1">
+                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+              </div>
+            </div>
+            <div>
+              <label for="last-name" class="block text-sm font-medium text-warm-gray-900">Nom</label>
+              <div class="mt-1">
+                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <div class="flex justify-between">
+                <label for="message" class="block text-sm font-medium text-warm-gray-900">Commentaire</label>
+                <span id="message-max" class="text-sm text-warm-gray-500">Max. 500 caractères</span>
+              </div>
+              <div class="mt-1">
+                <textarea id="message" name="message" rows="4" maxlength="500" class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500" aria-describedby="message-max"></textarea>
+              </div>
+            </div>
+            <div class="sm:col-span-2 sm:flex sm:justify-end">
+              <button type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-teal-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto">
+                Envoyer
+              </button>
+            </div>
+          </form>
+          <div id="results"></div>
+
+          <script src="/src/router/script.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
