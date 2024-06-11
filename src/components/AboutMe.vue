@@ -53,6 +53,7 @@
     align-items: center;
     padding-top: 60px;
     line-height: 20px;
+    padding: 10% 0;
 }
 
 #me {

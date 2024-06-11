@@ -32,10 +32,10 @@
   const subject = ref('')
   const message = ref('')
 
-  // Défini messageSent en false au départ
+  /* Défini messageSent en false au départ */
   const messageSent = ref(false)
   
-  // Vérifie si les champs sont remplis
+  /* Vérifie si les champs sont remplis */
   const isFormValid = computed(() => {
     return name.value && subject.value && message.value
   })
@@ -58,6 +58,7 @@
     padding-top: 0;
     text-decoration: underline;
     color: #ccb403;
+    padding: 10px 50px 20px;
   }
   
   form {
@@ -65,19 +66,20 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding-top: 100px;
-    padding-bottom: 60px;
-    margin-top: 50px;
+    padding-top: 20%;
+    padding-bottom: 100px;
+    margin-top: 10%;
     margin-left: 65px;
     background-color: #034e7c;
-    box-shadow: 5px 5px 1px #ccb403;
-    width: 94%;
-    border-radius: 5%;
+    box-shadow: 4px 5px 1px #ccb403;
+    width: 95%;
     color: #ccb403;
+    
   }
   
   label {
     background-color: var(--primary-color);
+    
   }
   
   button {
@@ -90,14 +92,17 @@
   
   textarea {
     border-radius: 10px;
+    
   }
   
   div {
     display: flex;
     flex-direction: column;
+    
   }
   
   #form {
     scroll-margin-top: 130px;
+    
   }
   </style>

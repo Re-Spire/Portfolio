@@ -35,7 +35,7 @@ a,
 }
 
 
-/* désactive le redimensionnement du message envoyer en mail */
+/* désactive le redimensionnement formulaire d'envoie en mail */
 
 textarea {
   resize: vertical;
