@@ -32,6 +32,8 @@
   const subject = ref('')
   const message = ref('')
 
+  const mail = import.meta.env.VITE_MAIL_ADRESS
+
   /* Défini messageSent en false au départ */
   const messageSent = ref(false)
   

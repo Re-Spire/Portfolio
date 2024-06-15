@@ -16,4 +16,4 @@ const router = new createRouter({
   ]
 });
 
-export default router;
+export default router
