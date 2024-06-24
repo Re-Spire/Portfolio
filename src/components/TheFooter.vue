@@ -1,7 +1,7 @@
 
 <template>
     <Footer>
-<small>Dernière mise à jour le 15 juin 2024</small>  
+<small>Dernière mise à jour le 24 juin 2024</small>  
 
 <div>
     <a href="https://github.com/Re-Spire" target="_blank" ref="GitHub"><img src="/src/assets/img/GitHub.png" alt="logo GitHub"></a>

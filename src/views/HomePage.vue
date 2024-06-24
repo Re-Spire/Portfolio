@@ -1,10 +1,10 @@
 <template>
     <Header/>
-    <Aboutme/>
-  <TheForm/> 
-  <Modal/>
-  <Footer/>
-  </template>
+    <Modal/> 
+    <Aboutme/>  
+    <TheForm/>  
+    <Footer/>
+</template>
   
   <script setup>
 
