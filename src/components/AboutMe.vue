@@ -1,7 +1,5 @@
-<script setup></script>
-
-
 <template>
+      
   <div id="aboutMe">
     <section id="me">
       <img src="/src/assets/img/Me.png" alt="" />
@@ -14,6 +12,7 @@
             <h2>Html</h2>
           </div>
         </li>
+        
         <li>
             <h2>Css</h2>
           <img src="/src/assets/img/CSS.png" alt="logo css" />
@@ -28,6 +27,7 @@
         </li>
       </ul>
     </section>
+    <form @submit.prevent="onSubmit" id="AboutMe" ref="AboutMe"></form>
     <section id="aboutMe">
       <h2>Présentation</h2>
       <p>
@@ -43,6 +43,7 @@
       </p>
     </section>
   </div>
+  
 </template>
 
 <style scoped>

@@ -1,30 +1,3 @@
-<template>
-    <form @submit.prevent="onSubmit" id="form" ref="form">
-      <h2>Contactez-moi pour vos projets!</h2>
-      <div>
-        <label for="name">Nom (Obligatoire)</label>
-        <input id="name" ref="name" type="text" placeholder="" required />
-      </div>
-      <div>
-        <label for="subject">Sujet (Obligatoire)</label>
-        <input id="subject" ref="subject" type="text" placeholder="" required />
-      </div>
-      <div>
-        <label for="message">Votre message ici</label>
-        <textarea
-          id="message"
-          ref="message"
-          rows="15"
-          cols="80"
-          placeholder="Merci d'écrire votre message ici."
-          required
-        />
-      </div>
-      <button type="submit" value="send" @click="showMessage">Envoyer</button>
-      <p class="message_sent" v-show="messageSent">Message envoyé {{ mail }}</p>
-    </form>
-  </template>
-  
   <script setup>
   import { ref, computed } from 'vue'
   
@@ -54,6 +27,34 @@
     }
   }
   </script>
+
+  <template>
+    <form @submit.prevent="onSubmit" id="form" ref="form">
+      <h2>Contactez-moi pour vos projets!</h2>
+      <div>
+        <label for="name">Nom (Obligatoire)</label>
+        <input id="name" ref="name" type="text" placeholder="" required />
+      </div>
+      <div>
+        <label for="subject">Sujet (Obligatoire)</label>
+        <input id="subject" ref="subject" type="text" placeholder="" required />
+      </div>
+      <div>
+        <label for="message">Votre message ici</label>
+        <textarea
+          id="message"
+          ref="message"
+          rows="15"
+          cols="80"
+          placeholder="Merci d'écrire votre message ici."
+          required
+        />
+      </div>
+      <button type="submit" value="send" @click="showMessage">Envoyer</button>
+      <p class="message_sent" v-show="messageSent">Message envoyé {{ mail }}</p>
+    </form>
+  </template>
+  
   
   <style scoped>
   h2 {
@@ -89,7 +90,7 @@
     width: 100px;
     height: 50px;
     border-radius: 20px;
-    background-color: var(--secondary-color);
+    background-color: #ccb403;
   }
   
   textarea {

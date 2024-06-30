@@ -1,16 +1,29 @@
 
 <template>
+
     <Footer>
-<small>Dernière mise à jour le 24 juin 2024</small>  
+
+<small>Dernière mise à jour le 28 juin 2024</small>  
 
 <div>
     <a href="https://github.com/Re-Spire" target="_blank" ref="GitHub"><img src="/src/assets/img/GitHub.png" alt="logo GitHub"></a>
     <a href="https://www.facebook.com/bunelgeoffrey/?viewas=100000686899395" target="_blank" ref="Facebook"><img src="/src/assets/img/Facebook.png" alt="Logo Facebook"></a>
 </div>
 
+<audio src="/src/assets/Musique/Nuit-sans-fin.mp3"></audio>
+<button class="paused">Ecouter moi</button>
+<input type="range" min="1" max="2" step="0.01" value="1" class="volume" />
+
 <small>  | © by Re-Spire 2024</small>
+
     </Footer>
+
 </template>
+
+<script>
+
+
+</script>
 
 <style scoped>
 
@@ -25,14 +38,14 @@ padding-top: 10px;
 height: 50px;
 align-items: end;
 overflow: auto;
-color: #6d0808;
+color: #034e7c;
 font-size: 20px;
 position: fixed;
 bottom :0;
 }
 
 a :hover{
-background-color: #6d2908;
+background-color: #034e7c;
 }
 
 img {

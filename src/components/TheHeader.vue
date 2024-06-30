@@ -15,7 +15,6 @@ const activeMenu = ref('Accueil')
 const setActiveMenu = (menu) => {
   activeMenu.value = menu
 }
-
 </script>
 
 <template>
@@ -27,8 +26,9 @@ const setActiveMenu = (menu) => {
         :style="{ transform: 'translate(' + x * 200 + 'px, ' + y * 100 + 'px)' }"></a>
     <nav>
       <a :class="{ active: activeMenu === 'Accueil' }" href="#" @click="setActiveMenu('Accueil')">Accueil</a>
-      <a :class="{ active: activeMenu === 'Présentation' }" href="#APropos" @click="setActiveMenu('Présentation')">Présentation</a>
+      <a :class="{ active: activeMenu === 'AboutMe' }" href="#AboutMe" @click="setActiveMenu('AboutMe')">Présentation</a>
       <a :class="{ active: activeMenu === 'Contact' }" href="#form" @click="setActiveMenu('Contact')">Contact</a>
+      <a :class="{ active: activeMenu === 'Projets' }" href="#projets" @click="setActiveMenu('Projets')">Projets</a>
     </nav>
   </header>
 </template>
@@ -53,13 +53,13 @@ header {
 img {
   width: 200px;
   height: 80px;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  width: 35%;
+  width: 40%;
   font-size: 25px;
 }
 
