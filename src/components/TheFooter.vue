@@ -3,16 +3,16 @@
 
     <Footer>
 
-<small>Dernière mise à jour le 28 juin 2024</small>  
+<small>Dernière mise à jour le 03 juillet 2024</small>  
 
 <div>
     <a href="https://github.com/Re-Spire" target="_blank" ref="GitHub"><img src="/src/assets/img/GitHub.png" alt="logo GitHub"></a>
     <a href="https://www.facebook.com/bunelgeoffrey/?viewas=100000686899395" target="_blank" ref="Facebook"><img src="/src/assets/img/Facebook.png" alt="Logo Facebook"></a>
 </div>
 
-<audio src="/src/assets/Musique/Nuit-sans-fin.mp3"></audio>
-<button class="paused">Ecouter moi</button>
-<input type="range" min="1" max="2" step="0.01" value="1" class="volume" />
+<audio controls>
+    <source src="/src/assets/Musique/audioPlayer.mp3">
+</audio>
 
 <small>  | © by Re-Spire 2024</small>
 
