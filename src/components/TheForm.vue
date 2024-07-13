@@ -26,17 +26,39 @@
       }, 1500)
     }
   }
+
+  // script formulaire d'envoie //
+
+  import emailjs from '@emailjs/browser'
+
+var templateParams = {
+  name: 'Geoffrey',
+  notes: 'subject',
+};
+
+emailjs.send('Re-Spire', 'template_8c4csdr', templateParams, {
+    publicKey: 'kXJyTIOITrPJNE1YA',
+  })
+  .then(
+    (response) => {
+      console.log('SUCCESS!', response.status, response.text);
+    },
+    (err) => {
+      console.log('FAILED...', err);
+    },
+  );
+
   </script>
 
   <template>
     <form @submit.prevent="onSubmit" id="form" ref="form">
       <h2>Contactez-moi pour vos projets!</h2>
       <div>
-        <label for="name">Nom (Obligatoire)</label>
+        <label for="name">Nom</label>
         <input id="name" ref="name" type="text" placeholder="" required />
       </div>
       <div>
-        <label for="subject">Sujet (Obligatoire)</label>
+        <label for="subject">Sujet</label>
         <input id="subject" ref="subject" type="text" placeholder="" required />
       </div>
       <div>
