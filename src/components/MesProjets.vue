@@ -56,17 +56,33 @@ const closeModal = () => {
                 <ul>
             <li id="HTML">HTML
               <img src="../assets/img/html.png" alt="logo du language html" />
-              <span class="etoile">★</span>
-              <span class="etoile">★</span>
+              <div class="rating">
+                <span class="star checked">★</span>
+                <span class="star checked">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
             </li>
             <li id="JS">JS
               <img src="../assets/img/js.png" alt="logo du language js" />
-              <span class="etoile">★</span>
+              <div class="rating">
+                <span class="star checked">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
             </li>            
             <li id="CSS">CSS
               <img src="../assets/img/css.png" alt="logo du language css" />
-              <span class="etoile">★</span>
-              <span class="etoile">★</span>
+              <div class="rating">
+                <span class="star checked">★</span>
+                <span class="star checked">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
             </li>
 
           </ul>
@@ -101,6 +117,15 @@ section {
   
 }
 
+.star {
+  padding: 0;
+  width: 20%;
+  font-size: 1vw;
+  color: black;
+}
+.checked {
+  color: #ccb403;
+}
 section h2,
 section p {
   display: flex;
